@@ -1300,7 +1300,7 @@ section,
 
 .clients .client-logo img {
   padding: 50px;
-  max-width: 80%;
+  /* max-width: 80%; */
   transition: 0.3s;
 }
 
@@ -2620,4 +2620,56 @@ section,
 .bg-primary {
   --bs-bg-opacity: 1;
   background-color:  #fdc157 !important;
+}
+
+/*** testimonial Start ***/
+.testimonial .owl-carousel.testimonial-carousel {
+  position: relative;
+}
+
+.testimonial .owl-carousel.testimonial-carousel .testimonial-item .testimonial-content {
+  position: relative;
+  border-radius: 10px;
+  background: var(--bs-light);
+}
+
+.testimonial .owl-carousel.testimonial-carousel .testimonial-item .testimonial-content::after {
+  position: absolute;
+  content: "";
+  width: 45px;
+  height: 45px;
+  bottom: -20px;
+  left: 30px;
+  transform: rotate(45deg);
+  background: var(--bs-light);
+  z-index: -1;
+}
+
+.testimonial .owl-carousel.testimonial-carousel .owl-nav {
+  position: absolute;
+  top: -60px;
+  right: 0;
+  display: flex;
+  font-size: 40px;
+  color: var(--bs-primary);
+}
+
+.testimonial .owl-carousel.testimonial-carousel .owl-nav .owl-prev {
+  margin-right: 40px;
+}
+
+.testimonial .owl-carousel.testimonial-carousel .owl-nav .owl-prev,
+.testimonial .owl-carousel.testimonial-carousel .owl-nav .owl-next {
+  transition: 0.5s;
+}
+
+.testimonial .owl-carousel.testimonial-carousel .owl-nav .owl-prev:hover,
+.testimonial .owl-carousel.testimonial-carousel .owl-nav .owl-next:hover {
+  color: var(--bs-secondary);
+}
+/*** testimonial end ***/
+
+.text-orange {
+  --bs-text-opacity: 1;
+  color: #df1529 !important;
 }
